@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-emerald-800;
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .div-list {
+    @apply p-2 flex flex-col justify-center items-center font-serif;
+  }
+  .div-cards {
+    @apply w-60 h-80 m-2 bg-gray flex flex-col justify-center items-center rounded-md  sm:hover:bg-dgray  sm:hover:text-dwhite font-serif  text-xl  text-dgray;
+  }
+}
