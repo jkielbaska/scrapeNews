@@ -10,7 +10,7 @@
 2. Menu boczne
 
 - Lista państw z flagą kraju przed nazwą
-- po kliknięciu w nazwę państwa przekierowanie na urla /country/[kraj]
+- po kliknięciu w nazwę państwa przekierowanie na url /country/[kraj]
 
 3. Główny content
 
