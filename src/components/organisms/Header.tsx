@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { GoBack } from "../atoms/GoBack";
-import { HeaderPopup } from "../atoms/HeadPopup";
+// import { GoBack } from "../atoms/GoBack";
+import { HeaderPopup } from "../atoms/HeaderPopup";
 import { ViewChanger } from "../molecules/ViewChanger";
-
+import { SideMenu } from "./SideMenu";
 // - nazwa
 // - przycisk odpowiadający za zmianę widoku newsów: lista lub kafelki. Do przechowania stanu wykorzystać reduxa
 // - przycisk do popupu z opisem tego co sprawiło mi największą trudność w zadniu i co największą frajdę. Może react-tostify?
@@ -14,17 +14,17 @@ export const Header = () => {
 
   return (
     <div>
-      <header className="bg-gray-900 text-white p-4 w-100v fixed top-0">
+      <header className="bg-gray-800 text-white p-4 w-100v fixed top-0">
         <div className="flex flex-row justify-between">
           <Link href="/">
-            <h1 className="text-xl font-bold">GnNews</h1>
+            <h1 className="text-3xl font-bold  pb-3">GnNews</h1>
           </Link>
           <ViewChanger />
         </div>
+        <SideMenu />
         <HeaderPopup />
-        <div className="flex">{router.pathname !== "/" && <GoBack />}</div>
+        {/* not needed in prod. <div className="flex">{router.pathname !== "/" && <GoBack />}</div> */}
       </header>
-      {/* </header> */}
     </div>
   );
 };
