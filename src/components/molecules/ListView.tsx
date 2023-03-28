@@ -1,6 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Params, CountryNewsResponse } from "@/types/tNewsResponse";
+import { MainPopup } from "./MainPopup";
 
 export const ListView = ({
   countryNews,
@@ -22,6 +21,10 @@ export const ListView = ({
                 : ""}
             </h4>
             <h3>{article.publishedAt !== null ? article.publishedAt : ""}</h3>
+            <MainPopup
+              article={article}
+              countryNewsUrl={article.url}
+            ></MainPopup>
           </div>
         );
       })}
@@ -29,7 +32,7 @@ export const ListView = ({
   );
 };
 // - każdy news w przypadku listy to: tytuł, nazwa źródła, data publikacji
-
+// - kliknięcie na newsa powinno otworzyć popupa z jego treścią, autorem treści i urlem do strony skąd dany news był pobrany
 {
   /* <p>
 {article.description !== null
