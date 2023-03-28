@@ -4,16 +4,15 @@
 
 @layer base {
   body {
-    @apply bg-emerald-800;
-    @apply box-border;
+    @apply m-0 bg-gray-900 box-border;
   }
 }
 
 @layer components {
   .div-list {
-    @apply p-2 flex flex-col justify-center items-center font-serif;
+    @apply m-4 flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md;
   }
   .div-cards {
-    @apply w-60 h-80 m-2 bg-gray flex flex-col justify-center items-center rounded-md  sm:hover:bg-dgray  sm:hover:text-dwhite font-serif  text-xl  text-dgray;
+    @apply w-60 h-80 text-xl m-3 flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md;
   }
 }
