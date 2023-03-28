@@ -1,4 +1,4 @@
-import { ArticleImage } from "@/components/molecules/ArticleImage";
+import { ArticleImage } from "@/components/atoms/ArticleImage";
 import { CountryNewsResponse } from "@/types/tNewsResponse";
 import { MainPopup } from "./MainPopup";
 
