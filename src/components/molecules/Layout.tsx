@@ -1,8 +1,6 @@
-import Head from "next/head";
 import { ReactNode } from "react";
 import { Footer } from "../organisms/Footer";
 import { Header } from "../organisms/Header";
-import { SideMenu } from "../organisms/SideMenu";
 // import { useDispatch, useSelector } from "react-redux";
 // import { setLayout } from "@/redux/store";  //docelowo layout w layoucie
 
