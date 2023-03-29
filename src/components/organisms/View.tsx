@@ -1,6 +1,6 @@
-import { Params, CountryNewsResponse } from "@/types/tNewsResponse";
-import { ArticleImage } from "./../atoms/ArticleImage";
-import { MainPopup } from "./MainPopup";
+import { CountryNewsResponse } from "@/types/tNewsResponse";
+import { ArticleImage } from "../atoms/ArticleImage";
+import { MainPopup } from "../molecules/MainPopup";
 
 export const View = ({
   countryNews,
@@ -18,8 +18,8 @@ export const View = ({
             key={`${article.publishedAt} ${Math.random()}`}
             className={
               type === "list"
-                ? "div-list"
-                : "m-3 w-60v max-w-md flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md"
+                ? "m-4 flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md first:mt-10 last:mb-20"
+                : "m-3 w-60v max-w-md flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md first:mt-10 last:mb-20"
             }
           >
             {type === "block" && (
@@ -41,29 +41,11 @@ export const View = ({
                   : "no description provided. Click to see whole article"}
               </p>
             )}
-            <MainPopup
-              article={article}
-              countryNewsUrl={article.url}
-            ></MainPopup>
+
+            <MainPopup article={article} countryNewsUrl={article.url} />
           </div>
         );
       })}
     </div>
   );
 };
-// - każdy news w przypadku listy to: tytuł, nazwa źródła, data publikacji
-// - każdy news w postaci kafelka: miniaturka (jeśli jest), tytuł, nazwa źródła, data publikacji i description.
-// - kliknięcie na newsa powinno otworzyć popupa z jego treścią, autorem treści i urlem do strony skąd dany news był pobrany
-// https://newsapi.org/docs/guides/how-to-get-the-full-content-for-a-news-article
-
-// const handleClick = async (url: string | null) => {
-//     try {
-//       const res = await axios.get(
-//         `/api/scrapeWeb?url=${encodeURIComponent(url!)}`
-//       );
-//       const data = res.data;
-//       console.log(data);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
