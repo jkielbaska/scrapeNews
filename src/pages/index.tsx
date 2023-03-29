@@ -1,6 +1,7 @@
 import { useCountriesName } from "@/hooks/useCountriesName";
 import { LinkFlagImage } from "@/components/atoms/LinkFlagImage";
 import { useSelector } from "react-redux";
+import { Footer } from "@/components/organisms/Footer";
 
 export default function Home() {
   const { countriesData } = useCountriesName();
@@ -28,6 +29,7 @@ export default function Home() {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 }

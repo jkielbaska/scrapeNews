@@ -12,7 +12,7 @@ export default async function handler(req, res) {
       url: decodedUrl,
     });
     const article = new Readability(dom.window.document).parse();
-    res.status(200).send(article.content); // or .textContent, it is rendered as just text. Can't decide which one to use
+    res.status(200).send(article.content); // or .textContent
   } catch (error) {
     console.error(error);
     res
@@ -23,19 +23,3 @@ export default async function handler(req, res) {
     res.status(404).json({ error: "page not found" });
   }
 }
-
-//   try {
-//     const r1 = await axios.get(decodedUrl);
-//     const firstResult = r1.data.articles[0];
-//     // const r2 = await axios.get(firstResult.decodedUrl);\
-//     const r2 = await axios.get(decodedUrl);
-//     const dom = new JSDOM(r2.data, {
-//       url: firstResult.decodedUrl,
-//     });
-//     const article = new Readability(dom.window.document).parse();
-//     res.status(200).json({ content: article.textContent });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: "Can't load this page because of security polisy. If you want to see whole article, click on "Click to see original article"" });
-//   }
-// }
