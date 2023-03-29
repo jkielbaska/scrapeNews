@@ -1,6 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+interface LayoutState {
+  layout: string;
+}
+
+const initialState: LayoutState = {
   layout: "block",
 };
 
@@ -8,7 +12,7 @@ const layoutSlice = createSlice({
   name: "layout",
   initialState,
   reducers: {
-    setLayout: (state, action) => {
+    setLayout: (state, action: PayloadAction<string>) => {
       state.layout = action.payload;
     },
   },
