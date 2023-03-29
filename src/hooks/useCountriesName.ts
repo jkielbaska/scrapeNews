@@ -9,11 +9,13 @@ export const useCountriesName = () => {
     const response = await getTopNews();
     const sources = response.sources;
 
-    const updatedCountries = sources.concat({
-      id: "plnd",
-      name: "unknown",
-      country: "pl",
-    });
+    const updatedCountries = sources
+      .concat({
+        id: "plnd",
+        name: "unknown",
+        country: "pl",
+      })
+      .filter((item) => item.country !== "zh");
 
     const uniqueCountries = updatedCountries.reduce(
       (acc: Source[], source: Source) => {
@@ -27,11 +29,9 @@ export const useCountriesName = () => {
     );
     setCountriesData(uniqueCountries);
   };
-  //do alphabet sort
 
   useEffect(() => {
     fetchCountries();
-    console.log(countriesData);
   }, []);
 
   return { countriesData };
