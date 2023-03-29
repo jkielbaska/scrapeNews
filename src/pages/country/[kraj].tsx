@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { ListView } from "@/components/molecules/ListView";
-import { BlockView } from "@/components/molecules/BlockView";
+import { View } from "@/components/molecules/View";
 import { Params, CountryNewsResponse } from "@/types/tNewsResponse";
 import { getCountryNews } from "@/services/api";
 import { useSelector } from "react-redux";
+import { Footer } from "@/components/organisms/Footer";
 
 export async function getServerSideProps({ params }: { params: Params }) {
   const countryNews = await getCountryNews(params.kraj);
@@ -34,14 +34,14 @@ const CountryById = ({
 
         <div>
           {layout === "block" ? (
-            <BlockView countryNews={countryNews} />
+            <View countryNews={countryNews} type="block" />
           ) : layout === "list" ? (
-            <ListView countryNews={countryNews} />
+            <View countryNews={countryNews} type="list" />
           ) : (
-            <ListView countryNews={countryNews} />
+            <View countryNews={countryNews} type="block" />
           )}
         </div>
-        {/* <Footer totalResults={countryNews.totalResults} /> */}
+        <Footer totalResults={countryNews.totalResults} />
       </div>
     </>
   );
