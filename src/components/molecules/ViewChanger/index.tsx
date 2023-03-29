@@ -6,17 +6,17 @@ import { setLayout } from "@/redux/layoutSlice";
 export const ViewChanger = () => {
   const dispatch = useDispatch();
 
-  const handleLayoutChange = (newLayout: any) => {
+  const handleLayoutChange = (newLayout: string) => {
     dispatch(setLayout(newLayout));
   };
 
   return (
     <div className="flex justify-end gap-5 pr-5 pt-5">
-      <button onClick={() => handleLayoutChange("block")}>
+      <button role="blockbutton" onClick={() => handleLayoutChange("block")}>
         <ViewModuleIcon />
       </button>{" "}
       |
-      <button onClick={() => handleLayoutChange("list")}>
+      <button role="listbutton" onClick={() => handleLayoutChange("list")}>
         <ReorderIcon />
       </button>
     </div>
