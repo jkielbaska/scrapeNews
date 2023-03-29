@@ -1,34 +1,33 @@
-
-
 1. Header
 
-+ nazwa
-+ przycisk odpowiadający za zmianę widoku newsów: lista lub kafelki. Do przechowania stanu wykorzystać reduxa
++nazwa
++przycisk odpowiadający za zmianę widoku newsów: lista lub kafelki. Do przechowania stanu wykorzystać reduxa
 +/- przycisk do popupu z opisem tego co sprawiło mi największą trudność w zadniu i co największą frajdę. Może react-tostify?
+
 - przycisk do zmiany języka strony (nie wymagane, ale wypadałoby. react-translator-component, albo i18n?)
 
 2. Menu boczne
 
-+ Lista państw z flagą kraju przed nazwą
-+ po kliknięciu w nazwę państwa przekierowanie na url /country/[kraj]
++Lista państw z flagą kraju przed nazwą
++po kliknięciu w nazwę państwa przekierowanie na url /country/[kraj]
 
 3. Główny content
 
-+ newsy w postaci listy lub kafelków (w zależności od opcji w headerze)
-+ każdy news w przypadku listy to: tytuł, nazwa źródła, data publikacji
-+ każdy news w postaci kafelka: miniaturka (jeśli jest), tytuł, nazwa źródła, data publikacji i description.
-+ kliknięcie na newsa powinno otworzyć popupa z jego treścią, autorem treści i urlem do strony skąd dany news był pobrany
++newsy w postaci listy lub kafelków (w zależności od opcji w headerze)
++każdy news w przypadku listy to: tytuł, nazwa źródła, data publikacji
++każdy news w postaci kafelka: miniaturka (jeśli jest), tytuł, nazwa źródła, data publikacji i description.
++kliknięcie na newsa powinno otworzyć popupa z jego treścią, autorem treści i urlem do strony skąd dany news był pobrany
 
 4. Footer
 
-- aktualna godzina
-+ liczba artykułów wyświetlanych w głównym contencie
++aktualna godzina
++liczba artykułów wyświetlanych w głównym contencie
 
 //6502a2f91de446c2bbb3c8d8a5a69cdb
 
 ++DO API URLE
-+ zeby topnewsiarze i z nich kraje, bo wszystkich sie nei da: https://newsapi.org/v2/sources?apiKey=YOUR_API_KEY. To jest to samo co z dopiskiem topnews.
-+ zeby dany kraj: https://newsapi.org/v2/top-headlines?country=pl&apiKey=6502a2f91de446c2bbb3c8d8a5a69cdb
++zeby topnewsiarze i z nich kraje, bo wszystkich sie nei da: https://newsapi.org/v2/sources?apiKey=YOUR_API_KEY. To jest to samo co z dopiskiem topnews.
++zeby dany kraj: https://newsapi.org/v2/top-headlines?country=pl&apiKey=6502a2f91de446c2bbb3c8d8a5a69cdb
 
 ++do zdjec
 ++https://newsapi.org/docs/endpoints/top-headlines
