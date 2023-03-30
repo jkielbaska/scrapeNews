@@ -1,10 +1,10 @@
 import ViewModuleIcon from "@mui/icons-material/ViewModule"; //block view
 import ReorderIcon from "@mui/icons-material/Reorder";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "@/redux/store";
 import { setLayout } from "@/redux/layoutSlice";
 
 export const ViewChanger = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleLayoutChange = (newLayout: string) => {
     dispatch(setLayout(newLayout));
