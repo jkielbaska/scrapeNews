@@ -2,17 +2,20 @@ import { useCountriesName } from "@/hooks/useCountriesName";
 import { LinkFlagImage } from "@/components/atoms/LinkFlagImage";
 import { useSelector } from "react-redux";
 import { Footer } from "@/components/organisms/Footer";
+import { RootState } from "@/redux/store";
+import { FormattedMessage } from "react-intl";
 
 export default function Home() {
   const { countriesData } = useCountriesName();
-  const layout = useSelector((state: any) => state.layout.layout);
+  const layout = useSelector((state: RootState) => state.layout.layout);
+
   return (
     <>
       <h3 className="pt-[70px] flex justify-center text-gray-400 text-2xl">
-        See news from choosen country
+        <FormattedMessage id="startPageTitle" />
       </h3>
-      <div className="flex flex-wrap justify-center">
-        {countriesData.map((country) => {
+      <div className="flex flex-wrap justify-center mb-20">
+        {countriesData?.map((country) => {
           return (
             <div
               key={country.id}

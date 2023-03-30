@@ -6,6 +6,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { FormattedMessage } from "react-intl";
 
 export const MainPopup = ({
   countryNewsUrl,
@@ -14,19 +15,20 @@ export const MainPopup = ({
   countryNewsUrl: string;
   article: Article;
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClickOpen = () => () => {
     setIsOpen(true);
   };
-
   const handleClose = () => {
     setIsOpen(false);
   };
 
   return (
     <>
-      <Button onClick={handleClickOpen()}>See whole article</Button>
+      <Button onClick={handleClickOpen()}>
+        <FormattedMessage id="mainPopupButton" />
+      </Button>
       <Dialog
         open={isOpen}
         fullScreen
@@ -40,7 +42,7 @@ export const MainPopup = ({
             id="dialog-description"
             tabIndex={-1}
           >
-            <p>Authors: {article.author}</p>
+            <FormattedMessage id="mainPopupAuthors" /> {article.author}
           </DialogContentText>
 
           <DialogContentText
@@ -48,8 +50,11 @@ export const MainPopup = ({
             id="dialog-description"
             tabIndex={-1}
           >
-            <a href={article.url}>Link to article: {article.url}</a>
+            <a href={article.url}>
+              <FormattedMessage id="mainPopupLink" /> {article.url}
+            </a>
           </DialogContentText>
+
           <iframe
             loading="lazy"
             src={`/api/scrapeWeb?url=${encodeURIComponent(countryNewsUrl)}`}
@@ -57,8 +62,11 @@ export const MainPopup = ({
             height="93%"
           />
         </DialogContent>
+
         <DialogActions>
-          <Button onClick={handleClose}>CLOSE</Button>
+          <Button onClick={handleClose}>
+            <FormattedMessage id="mainPopupCloseButton" />
+          </Button>
         </DialogActions>
       </Dialog>
     </>

@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button";
 import { ToastContainer, toast } from "react-toastify";
+import { FormattedMessage } from "react-intl";
 import "react-toastify/dist/ReactToastify.css";
 
-export const HeaderPopup = () => {
-  const notify = () => toast("Największą trudnością dla mnie");
+export const HeadPopup = () => {
+  const notify = () => toast(<FormattedMessage id="popupToast" />);
 
   return (
     <>
@@ -19,7 +20,7 @@ export const HeaderPopup = () => {
         theme="light"
       />
       <Button variant="outlined" onClick={notify}>
-        open info
+        <FormattedMessage id="popupButton" />
       </Button>
     </>
   );

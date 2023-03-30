@@ -1,4 +1,5 @@
 import { useTime } from "@/hooks/useTime";
+import { FormattedMessage } from "react-intl";
 
 export const Footer = ({
   totalResults,
@@ -15,7 +16,9 @@ export const Footer = ({
     <div className="w-100v fixed bottom-0">
       <footer className=" mt-auto bg-gray-800 text-white p-4 relative flex flex-row justify-between">
         {totalResults !== undefined && (
-          <p> {totalResults} articles on the page</p>
+          <p>
+            {totalResults} <FormattedMessage id="footerArticlesNumber" />
+          </p>
         )}
         <p>{currentHour}</p>
       </footer>

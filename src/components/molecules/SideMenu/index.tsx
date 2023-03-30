@@ -3,9 +3,10 @@ import { LinkFlagImage } from "../../atoms/LinkFlagImage";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, Box, Typography, IconButton } from "@mui/material";
+import { FormattedMessage } from "react-intl";
 
 export const SideMenu = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const { countriesData } = useCountriesName();
 
   return (
@@ -27,11 +28,11 @@ export const SideMenu = () => {
       >
         <Box p={2} width="30vw" textAlign="center">
           <Typography variant="h6" component="div">
-            Select Country
+            <FormattedMessage id="sideMenuTitle" />
           </Typography>
           <Box width="full" flexDirection="column">
             <ul role="countrieslist">
-              {countriesData.map((country) => {
+              {countriesData?.map((country) => {
                 return (
                   <li key={country.id}>
                     <Box p={1} display="flex" alignItems={"flex-start"}>
