@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 export const LinkFlagImage = ({ country }: { country: string }) => {
   const countryName = countryList.getName(country);
   const flagUrl = `https://flagcdn.com/32x24/${country}.png`;
+
   return (
     <>
       <Link href={`/country/${country}`}>
