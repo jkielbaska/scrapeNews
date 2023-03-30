@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 export const useTime = () => {
-  const [hydrated, setHydrated] = useState(false); //to prevent hydration error
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [hydrated, setHydrated] = useState<boolean>(false); //to prevent hydration error
+  const [currentDate, setCurrentDate] = useState<Date>(new Date());
 
   useEffect(() => {
     {
