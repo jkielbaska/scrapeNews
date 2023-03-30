@@ -2,9 +2,9 @@
 
 +nazwa
 +przycisk odpowiadający za zmianę widoku newsów: lista lub kafelki. Do przechowania stanu wykorzystać reduxa
-+/- przycisk do popupu z opisem tego co sprawiło mi największą trudność w zadniu i co największą frajdę. Może react-tostify?
++przycisk do popupu z opisem tego co sprawiło mi największą trudność w zadniu i co największą frajdę. Może react-tostify?
 
-- przycisk do zmiany języka strony (nie wymagane, ale wypadałoby. react-translator-component, albo i18n?)
++przycisk do zmiany języka strony (nie wymagane, ale wypadałoby. react-translator-component, albo i18n?)
 
 2. Menu boczne
 
