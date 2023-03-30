@@ -35,13 +35,6 @@ module.exports = {
       maxWidth: {
         "10r": "10rem",
       },
-      top: {
-        header: "var(--header-height)",
-      },
-      fontSize: {
-        title: "clamp(1rem, 7.2vw, 4rem)",
-        subtitle: "clamp(0.7rem, 5.9vw, 3rem)",
-      },
     },
   },
   plugins: [],
