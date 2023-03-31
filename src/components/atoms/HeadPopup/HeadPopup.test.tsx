@@ -2,7 +2,6 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { IntlProvider } from "react-intl";
 import "react-toastify/dist/ReactToastify.css";
 import { HeadPopup } from "./index";
-
 import { messages } from "@/i18n/messages";
 
 describe("Renders HeadPopup component correctly", () => {
@@ -16,6 +15,7 @@ describe("Renders HeadPopup component correctly", () => {
         <HeadPopup />
       </IntlProvider>
     );
+
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
     fireEvent.click(button);
