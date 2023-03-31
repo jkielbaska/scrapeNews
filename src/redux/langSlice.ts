@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "@/redux/store";
 import { LOCALES } from "@/i18n/locales";
 
 interface LangState {
@@ -18,6 +19,8 @@ const langSlice = createSlice({
     },
   },
 });
+
+export const selectorLang = (state: RootState) => state.lang.lang;
 
 export const { setLang } = langSlice.actions;
 

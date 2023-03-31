@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "./store";
 
 interface LayoutState {
   layout: string;
@@ -17,6 +18,8 @@ const layoutSlice = createSlice({
     },
   },
 });
+
+export const selectorLayout = (state: RootState) => state.layout.layout;
 
 export const { setLayout } = layoutSlice.actions;
 
