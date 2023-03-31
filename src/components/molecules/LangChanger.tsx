@@ -12,16 +12,13 @@ export const LangChanger = () => {
   return (
     <div className="flex justify-end gap-5 pr-5 pt-5">
       <button
-        role="blockbutton"
+        role="engbutton"
         onClick={() => handleLangChange(LOCALES.ENGLISH)}
       >
         ENG
       </button>{" "}
       |
-      <button
-        role="listbutton"
-        onClick={() => handleLangChange(LOCALES.POLISH)}
-      >
+      <button role="plbutton" onClick={() => handleLangChange(LOCALES.POLISH)}>
         PL
       </button>
     </div>
