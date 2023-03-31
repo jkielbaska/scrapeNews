@@ -31,5 +31,5 @@ export interface TopNewsResponse {
 }
 
 export type Params = {
-  kraj: string | string[] | undefined;
+  id: string | string[] | undefined;
 };
