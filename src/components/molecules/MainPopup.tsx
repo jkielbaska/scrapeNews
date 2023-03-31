@@ -38,21 +38,20 @@ export const MainPopup = ({
         <DialogTitle id="dialog-title">{article.title}</DialogTitle>
         <DialogContent>
           <DialogContentText
-            sx={{ paddingBottom: "1px" }}
+            sx={{ paddingBottom: "2px" }}
             id="dialog-description"
             tabIndex={-1}
           >
             <FormattedMessage id="mainPopupAuthors" /> {article.author}
           </DialogContentText>
 
+          <FormattedMessage id="mainPopupLink" />
           <DialogContentText
-            sx={{ paddingBottom: "10px" }}
+            sx={{ paddingBottom: "10px", color: "blue" }}
             id="dialog-description"
             tabIndex={-1}
           >
-            <a href={article.url}>
-              <FormattedMessage id="mainPopupLink" /> {article.url}
-            </a>
+            <a href={article.url}>{article.url}</a>
           </DialogContentText>
 
           {article.source.id !== "google-news" ? (
@@ -63,7 +62,7 @@ export const MainPopup = ({
               height="93%"
             />
           ) : (
-            <DialogContentText>
+            <DialogContentText sx={{ fontWeight: "bold", color: "blue" }}>
               {article.content ? (
                 article.content
               ) : (
