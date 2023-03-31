@@ -10,6 +10,8 @@ export const messages = {
     mainPopupButton: "See article",
     mainPopupAuthors: "Authors:",
     mainPopupLink: "Link to article:",
+    mainPopupContentApologize:
+      "Unfortunately we can't show you this article at the moment. Please click link above to see it.",
     mainPopupCloseButton: "CLOSE",
     footerArticlesNumber: "articles on the page",
     viewComponentSource: "Source",
@@ -25,6 +27,8 @@ export const messages = {
     mainPopupButton: "Zobacz artykuł",
     mainPopupAuthors: "Autorzy:",
     mainPopupLink: "Link do artykułu:",
+    mainPopupContentApologize:
+      "Niestety nie jesteśmy w stanie wyświetlić treści tego artykułu. Kliknij link powyżej aby go zobaczyć.",
     mainPopupCloseButton: "ZAMKNIJ",
     footerArticlesNumber: "artykułów na stronie",
     viewComponentSource: "Źródło",

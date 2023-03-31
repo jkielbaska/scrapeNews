@@ -55,12 +55,22 @@ export const MainPopup = ({
             </a>
           </DialogContentText>
 
-          <iframe
-            loading="lazy"
-            src={`/api/scrapeWeb?url=${encodeURIComponent(countryNewsUrl)}`}
-            width="100%"
-            height="93%"
-          />
+          {article.source.id !== "google-news" ? (
+            <iframe
+              loading="lazy"
+              src={`/api/scrapeWeb?url=${encodeURIComponent(countryNewsUrl)}`}
+              width="100%"
+              height="93%"
+            />
+          ) : (
+            <DialogContentText>
+              {article.content ? (
+                article.content
+              ) : (
+                <FormattedMessage id="mainPopupContentApologize" />
+              )}
+            </DialogContentText>
+          )}
         </DialogContent>
 
         <DialogActions>
