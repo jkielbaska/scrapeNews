@@ -8,18 +8,16 @@ export const LinkFlagImage = ({ country }: { country: string }) => {
   const flagUrl = `https://flagcdn.com/32x24/${country}.png`;
 
   return (
-    <>
-      <Link href={`/country/${country}`}>
-        <div className="w-full h-full flex justify-center flex-col items-center">
-          <Image
-            alt={`flag of ${country}`}
-            src={flagUrl}
-            width={32}
-            height={24}
-          />
-          <Typography>{countryName}</Typography>
-        </div>
-      </Link>
-    </>
+    <Link href={`/country/${country}`}>
+      <div className="w-full h-full flex justify-center flex-col items-center">
+        <Image
+          alt={`flag of ${country}`}
+          src={flagUrl}
+          width={32}
+          height={24}
+        />
+        <Typography>{countryName}</Typography>
+      </div>
+    </Link>
   );
 };
