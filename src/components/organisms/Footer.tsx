@@ -1,5 +1,6 @@
 import { useTime } from "@/hooks/useTime";
 import { FormattedMessage } from "react-intl";
+import { LangChanger } from "@/components/molecules/LangChanger";
 
 export const Footer = ({
   totalResults,
@@ -14,13 +15,14 @@ export const Footer = ({
 
   return (
     <div className="w-100v fixed bottom-0">
-      <footer className=" mt-auto bg-gray-800 text-white p-4 relative flex flex-row justify-between">
+      <footer className="border-t border-logo bg-base text-logo font-bebas text-xl mt-auto p-4 relative flex flex-row justify-between">
         {totalResults !== undefined && (
           <p>
             {totalResults} <FormattedMessage id="footerArticlesNumber" />
           </p>
         )}
         <p>{currentHour}</p>
+        <LangChanger />
       </footer>
     </div>
   );

@@ -11,11 +11,10 @@ export const ViewChanger = () => {
   };
 
   return (
-    <div className="flex justify-end gap-5 pr-5 pt-5">
+    <div className="flex justify-end gap-5 pr-5 ">
       <button role="blockbutton" onClick={() => handleLayoutChange("block")}>
         <ViewModuleIcon />
       </button>{" "}
-      |
       <button role="listbutton" onClick={() => handleLayoutChange("list")}>
         <ReorderIcon />
       </button>

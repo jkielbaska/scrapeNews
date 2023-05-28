@@ -19,8 +19,8 @@ export const View = ({
             key={`${article.publishedAt} ${Math.random()}`}
             className={
               type === "list"
-                ? "m-4 w-full flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md"
-                : "m-3 w-60v max-w-md flex flex-col justify-center items-center font-serif bg-gray-300 border-sky-700 border-2 rounded-md "
+                ? "m-4 w-full flex flex-col justify-center items-center  bg-gray-300 border-sky-700 border-2 rounded-md"
+                : "m-3 w-60v max-w-md flex flex-col justify-center items-center  bg-gray-300 border-sky-700 border-2 rounded-md "
             }
           >
             {type === "block" && (

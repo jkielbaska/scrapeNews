@@ -21,10 +21,10 @@ export default function Home() {
               key={country.id}
               className={
                 layout === "block"
-                  ? "w-[200px] h-[200px] text-xl m-3 flex items-center justify-center  font-serif bg-gray-400 border-sky-700 border-2 rounded-md"
+                  ? "w-[200px] h-[200px] text-xl m-3 flex items-center justify-center bg-gray-400 border-sky-700 border-2 rounded-md"
                   : layout === "list"
-                  ? "m-2 w-full font-serif bg-gray-400 border-sky-700 border-2 rounded-md"
-                  : "w-[200px] h-[200px] text-xl m-3 flex items-center justify-center  font-serif bg-gray-400 border-sky-700 border-2 rounded-md"
+                  ? "m-2 w-full bg-gray-400 border-sky-700 border-2 rounded-md"
+                  : "w-[200px] h-[200px] text-xl m-3 flex items-center justify-center bg-gray-400 border-sky-700 border-2 rounded-md"
               }
             >
               <LinkFlagImage country={country.country} />

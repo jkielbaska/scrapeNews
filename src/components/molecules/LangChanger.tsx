@@ -10,7 +10,7 @@ export const LangChanger = () => {
   };
 
   return (
-    <div className="flex justify-end gap-5 pr-5 pt-5">
+    <div className="flex justify-end gap-5 pr-5 font-bebas">
       <button
         role="engbutton"
         onClick={() => handleLangChange(LOCALES.ENGLISH)}
