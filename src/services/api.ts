@@ -2,12 +2,12 @@ import axios from "axios";
 import { TopNewsResponse, CountryNewsResponse } from "@/types/tNewsResponse";
 
 const apiBase = "https://newsapi.org/v2";
-const API_KEY = process.env.API_KEY;
+const APIKEY = process.env.API_KEY;
 
 export const api = axios.create({
   baseURL: apiBase,
   params: {
-    apiKey: API_KEY,
+    apiKey: APIKEY,
   },
 });
 
