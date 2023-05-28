@@ -5,6 +5,12 @@ module.exports = {
   important: "#__next",
   theme: {
     extend: {
+      colors: {
+        base: "#18122B",
+        logo: "#635985",
+        mviolet: "#443C68",
+        dviolet: "#393053",
+      },
       height: {
         "10v": "10vh",
         "20v": "20vh",
@@ -34,6 +40,10 @@ module.exports = {
       },
       maxWidth: {
         "10r": "10rem",
+      },
+      fontFamily: {
+        bebas: ["var(--font-bebas-neue)"],
+        gruppo: ["var(--font-gruppo)"],
       },
     },
   },
