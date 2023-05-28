@@ -30,7 +30,7 @@ npm install
 npm run dev
 ```
 
-Remember that you need to put your own API_KEY (src/services/api.ts)
+Remember that you need to put your own APIKEY (src/services/api.ts line 5)
 
 ## URLs
 
