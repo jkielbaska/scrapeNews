@@ -42,10 +42,10 @@ On every subpage there is a header and footer. In the header you can click on sc
 
 ## TODO
 
+&cross; Now - Change styling to be more modern
+
 &check; Add scraping
 
 &check; Add translation
-
-&cross; Change styling to be more modern
 
 &cross; Improve page UX (add onhover, loading, etc.)
