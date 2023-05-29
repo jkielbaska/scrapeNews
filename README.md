@@ -34,6 +34,8 @@ Remember that you need to put your own APIKEY (src/services/api.ts line 5)
 
 ## URLs
 
+_This section is not up-to-date because I'm working on page design now_
+
 On every subpage there is a header and footer. In the header you can click on scrapeNews to be redirected to home page, menu button to open countries (when you click on country - you are redirected to this country subpage), change view type (block or list) and change language (ENG/PL). In the footer is a clock and when you click on country/[id] subpage footer displays how much articles there displayed.
 
 - home page - You can click on country to be redirected to this country subpage
