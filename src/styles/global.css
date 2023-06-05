@@ -7,3 +7,12 @@
     @apply m-0 bg-base box-border;
   }
 }
+
+@layer components {
+  .div-block {
+    @apply text-xl m-3 flex flex-col items-center justify-center text-gray-400 bg-dviolet shadow-inner rounded-md;
+  }
+  .div-list {
+    @apply w-full flex flex-col bg-dviolet rounded-md text-gray-400;
+  }
+}
