@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import countryList from "country-list";
-import { Typography } from "@mui/material";
 
 export const LinkFlagImage = ({ country }: { country: string }) => {
   const countryName = countryList.getName(country);
@@ -9,14 +8,14 @@ export const LinkFlagImage = ({ country }: { country: string }) => {
 
   return (
     <Link href={`/country/${country}`}>
-      <div className="w-full h-full flex justify-center flex-col items-center">
-        <Image
+      <div className="w-full h-full flex">
+        {/* <Image
           alt={`flag of ${country}`}
           src={flagUrl}
           width={32}
           height={24}
-        />
-        <Typography>{countryName}</Typography>
+        /> */}
+        <p className="font-bebas text-3xl text-center">{countryName}</p>
       </div>
     </Link>
   );
