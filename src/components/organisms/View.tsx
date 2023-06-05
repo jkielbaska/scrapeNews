@@ -11,18 +11,17 @@ export const View = ({
   type: "list" | "block";
 }) => {
   return (
-    <div className=" flex flex-wrap justify-center mt-10 pb-20 ">
+    <div className=" flex flex-wrap justify-center pb-20 ">
       {countryNews?.articles.map((article) => {
         return (
           <div
             id="Click to article popup"
             key={`${article.publishedAt} ${Math.random()}`}
             className={
-              type === "list"
-                ? "m-4 w-full flex flex-col justify-center items-center  bg-gray-300 border-sky-700 border-2 rounded-md"
-                : "m-3 w-60v max-w-md flex flex-col justify-center items-center  bg-gray-300 border-sky-700 border-2 rounded-md "
+              type === "list" ? "div-list m-4 w-full " : "div-block m-3 w-60v "
             }
           >
+            {/* lg:w-9/12 lg:max-w-4xl lg:h-80 */}
             {type === "block" && (
               <ArticleImage urlToImage={article.urlToImage} />
             )}
